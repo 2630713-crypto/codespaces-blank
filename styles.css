@@ -1,0 +1,19 @@
+:root{
+  --bg:#ffffff;
+  --fg:#111111;
+  --muted:#666666;
+  --toolbar:#f3f3f3;
+}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,'Noto Sans KR',sans-serif;background:var(--bg);color:var(--fg);height:100vh;display:flex;flex-direction:column}
+.toolbar{display:flex;gap:8px;padding:8px;background:var(--toolbar);align-items:center}
+.toolbar button{padding:6px 10px;border:1px solid #ccc;background:#fff;border-radius:4px;cursor:pointer}
+.toolbar .theme-toggle{margin-left:auto;display:flex;align-items:center;gap:6px}
+#editor{flex:1;border:0;padding:16px;font-size:16px;line-height:1.5;resize:none;outline:none}
+.status{padding:6px 10px;font-size:13px;color:var(--muted);background:transparent;border-top:1px solid #eee}
+
+body.dark{--bg:#0b1220;--fg:#e6eef8;--muted:#9fb0c8;--toolbar:#0f1724}
+body.dark .toolbar button{background:#0b1220;color:var(--fg);border:1px solid #213247}
+
+/* ensure editor fills remaining space */
+html,body{height:100%}
+textarea#editor{width:100%;box-sizing:border-box;height:calc(100vh - 110px)}

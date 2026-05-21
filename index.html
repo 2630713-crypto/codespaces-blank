@@ -1,3 +1,27 @@
-<html>
-<body>hello_everyone</body>
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>메모장</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="toolbar">
+		<button id="newBtn" title="새 문서 (Ctrl/Cmd+N)">새로</button>
+		<button id="openBtn" title="열기 (Ctrl/Cmd+O)">열기</button>
+		<button id="saveBtn" title="저장 (Ctrl/Cmd+S)">저장</button>
+		<button id="downloadBtn" title="텍스트 내려받기">내보내기</button>
+		<label class="theme-toggle">다크
+			<input id="darkToggle" type="checkbox">
+		</label>
+		<input type="file" id="fileInput" accept=".txt" style="display:none">
+	</div>
+
+	<textarea id="editor" placeholder="여기에 입력하세요..."></textarea>
+
+	<div class="status" id="status">저장 상태: 불러오는 중…</div>
+
+	<script src="app.js"></script>
+</body>
 </html>
